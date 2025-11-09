@@ -12,6 +12,7 @@ namespace Repository.Repositories
 {
     public class GroupRepository : IRepository<Group>
     {
+        // Group elave eden method
         public void Create(Group data)
         {
             try
@@ -26,22 +27,22 @@ namespace Repository.Repositories
                 Console.WriteLine(ex.Message); 
             }
         }
-
+        // Group silen method
         public void Delete(int id)
         {
             throw new NotImplementedException();
         }
-
+        // Butun Group-lari getirir
         public List<Group> GetAll(Predicate<Group>? predicate)
         {
             throw new NotImplementedException();
         }
-
+        // Id-ye gore Group getirir
         public Group? GetById(int id)
         {
             throw new NotImplementedException();
         }
-
+        // Group-u yenileyen method
         public void Update(int id, Group data)
         {
             throw new NotImplementedException();

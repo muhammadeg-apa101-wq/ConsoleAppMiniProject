@@ -8,6 +8,7 @@ namespace Service.Helper
 {
     public class Helper
     {
+        //Console yazisinin rengini deyisdiren method
         public static void MsgColor(ConsoleColor color, string text)
         {
             Console.ForegroundColor = color;

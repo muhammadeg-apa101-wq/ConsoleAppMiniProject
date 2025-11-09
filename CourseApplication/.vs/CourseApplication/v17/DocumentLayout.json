@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{70EA1DEB-B999-486D-95D1-71EDC070E513}|CourseApplication\\CourseApplication.csproj|c:\\users\\baloglan\\desktop\\c# task\\courseapplication\\courseapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70EA1DEB-B999-486D-95D1-71EDC070E513}|CourseApplication\\CourseApplication.csproj|solutionrelative:courseapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5653D8-36F9-4795-8AE7-8754B0956811}|Service\\Service.csproj|c:\\users\\baloglan\\desktop\\c# task\\courseapplication\\service\\helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D5653D8-36F9-4795-8AE7-8754B0956811}|Service\\Service.csproj|solutionrelative:service\\helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA36801-A344-4503-927B-C4F31D061C6D}|Repository\\Repository.csproj|c:\\users\\baloglan\\desktop\\c# task\\courseapplication\\repository\\repositories\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FA36801-A344-4503-927B-C4F31D061C6D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\Users\\baloglan\\Desktop\\C# task\\CourseApplication\\Service\\Helper\\Helper.cs",
+              "RelativeDocumentMoniker": "Service\\Helper\\Helper.cs",
+              "ToolTip": "C:\\Users\\baloglan\\Desktop\\C# task\\CourseApplication\\Service\\Helper\\Helper.cs",
+              "RelativeToolTip": "Service\\Helper\\Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T08:33:35.991Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GroupRepository.cs",
+              "DocumentMoniker": "C:\\Users\\baloglan\\Desktop\\C# task\\CourseApplication\\Repository\\Repositories\\GroupRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\GroupRepository.cs",
+              "ToolTip": "C:\\Users\\baloglan\\Desktop\\C# task\\CourseApplication\\Repository\\Repositories\\GroupRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\GroupRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T08:28:20.87Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -28,7 +62,7 @@
               "RelativeDocumentMoniker": "CourseApplication\\Program.cs",
               "ToolTip": "C:\\Users\\baloglan\\Desktop\\C# task\\CourseApplication\\CourseApplication\\Program.cs",
               "RelativeToolTip": "CourseApplication\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwC4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T16:29:19.844Z",
               "EditorCaption": ""
