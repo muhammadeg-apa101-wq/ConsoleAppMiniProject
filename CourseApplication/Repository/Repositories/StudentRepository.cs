@@ -25,7 +25,7 @@ namespace Repository.Repositories
             throw new NotImplementedException();
         }
 
-        public Student? GetById(int id)
+        public Student? GetById(Predicate<Student> predicate)
         {
             throw new NotImplementedException();
         }

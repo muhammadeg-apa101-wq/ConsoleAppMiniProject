@@ -16,3 +16,7 @@ C:\Users\baloglan\Desktop\C# task\CourseApplication\CourseApplication\obj\Debug\
 C:\Users\baloglan\Desktop\C# task\CourseApplication\CourseApplication\obj\Debug\net8.0\CourseApplication.pdb
 C:\Users\baloglan\Desktop\C# task\CourseApplication\CourseApplication\obj\Debug\net8.0\CourseApplication.genruntimeconfig.cache
 C:\Users\baloglan\Desktop\C# task\CourseApplication\CourseApplication\obj\Debug\net8.0\ref\CourseApplication.dll
+C:\Users\baloglan\Desktop\C# task\CourseApplication\CourseApplication\bin\Debug\net8.0\Domain.dll
+C:\Users\baloglan\Desktop\C# task\CourseApplication\CourseApplication\bin\Debug\net8.0\Repository.dll
+C:\Users\baloglan\Desktop\C# task\CourseApplication\CourseApplication\bin\Debug\net8.0\Domain.pdb
+C:\Users\baloglan\Desktop\C# task\CourseApplication\CourseApplication\bin\Debug\net8.0\Repository.pdb

@@ -15,7 +15,7 @@ namespace Repository.Repositories.Interface
 
         void Delete(int id);
 
-        T? GetById(int id);
+        T? GetById(Predicate<T> predicate);
 
         List<T> GetAll(Predicate<T> predicate);
     }

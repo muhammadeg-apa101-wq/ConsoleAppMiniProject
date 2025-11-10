@@ -30,22 +30,38 @@ namespace Repository.Repositories
         // Group silen method
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            Group group = AppDbContext<Group>.datas.Find(m => m.Id == id);
+            AppDbContext<Group>.datas.Remove(group);
         }
         // Butun Group-lari getirir
         public List<Group> GetAll(Predicate<Group>? predicate)
         {
-            throw new NotImplementedException();
+            List<Group> groups = AppDbContext<Group>.datas;
+            return groups;
         }
         // Id-ye gore Group getirir
-        public Group? GetById(int id)
+        public Group? GetById(Predicate<Group> predicate)
         {
-            throw new NotImplementedException();
+            Group existData = AppDbContext<Group>.datas.Find(predicate);
+            return existData;
         }
         // Group-u yenileyen method
         public void Update(int id, Group data)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (data is null) throw new NotFoundException("Data is empty.");
+
+                Group existGroup = AppDbContext<Group>.datas.Find(m => m.Id == id);
+                existGroup.Name = data.Name;
+                existGroup.Teacher = data.Teacher;
+                existGroup.Room = data.Room;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
