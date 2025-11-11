@@ -14,6 +14,9 @@ namespace Service.Services.Interfaces
         Group UpdateGroup(int id, Group group);
         Group GetGroupById(int id);
         List<Group> GetAllGroup(Predicate<Group>? predicate = null);
+        List<Group> GetGroupByTeach(Predicate<Group>? predicate = null);
+        List<Group> GetGroupByRoom(Predicate<Group>? predicate = null);
+        List<Group> GetGroupByName(Predicate<Group>? predicate = null);
         void DeleteGroup(int id);
     }
 }

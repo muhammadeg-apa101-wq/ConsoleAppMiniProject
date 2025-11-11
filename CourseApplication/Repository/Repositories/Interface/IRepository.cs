@@ -18,5 +18,9 @@ namespace Repository.Repositories.Interface
         T? GetById(Predicate<T> predicate);
 
         List<T> GetAll(Predicate<T> predicate);
+
+        List<T> GetAllByName(Predicate<T> predicate);
+
+        List<T> GetAllByRoom(Predicate<T> predicate);
     }
 }

@@ -39,6 +39,19 @@ namespace Repository.Repositories
             List<Group> groups = AppDbContext<Group>.datas;
             return groups;
         }
+
+        public List<Group> GetAllByName(Predicate<Group> predicate)
+        {
+            List<Group> groups = AppDbContext<Group>.datas.FindAll(predicate);
+            return groups;
+        }
+
+        public List<Group> GetAllByRoom(Predicate<Group> predicate)
+        {
+            List<Group> groups = AppDbContext<Group>.datas.FindAll(predicate);
+            return groups;
+        }
+
         // Id-ye gore Group getirir
         public Group? GetById(Predicate<Group> predicate)
         {
