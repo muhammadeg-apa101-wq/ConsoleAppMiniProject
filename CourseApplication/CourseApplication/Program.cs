@@ -95,7 +95,7 @@ namespace CourseApplication
         public static void GetMenu() 
         {
             Console.WriteLine("Choose an option:");
-            ConsoleHelper.MsgColor(ConsoleColor.Cyan, "Group : 1- Create Group, 2- Update a Group Info, 3- Get a Group By ID, 4- Get All Groups, 5- Get Groups by Name 6- Get Groups by Teacher 7 - Get Groups by Room, 8- Delete a Group By ID, Student: 9- Create a Student");
+            ConsoleHelper.MsgColor(ConsoleColor.Cyan, "Group : 1- Create Group, 2- Update a Group Info, 3- Get a Group By ID, 4- Get All Groups, 5- Get Groups by Name 6- Get Groups by Teacher 7 - Get Groups by Room, 8- Delete a Group By ID, Student: 9- Create a Student , 10- Update Student info, 11-GetAllStudents 12-Get Student by ID 13- Delete a Student");
         }
     }
 }

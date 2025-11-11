@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{70EA1DEB-B999-486D-95D1-71EDC070E513}|CourseApplication\\CourseApplication.csproj|c:\\users\\baloglan\\desktop\\c# task\\courseapplication\\courseapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70EA1DEB-B999-486D-95D1-71EDC070E513}|CourseApplication\\CourseApplication.csproj|solutionrelative:courseapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D5653D8-36F9-4795-8AE7-8754B0956811}|Service\\Service.csproj|c:\\users\\baloglan\\desktop\\c# task\\courseapplication\\service\\enums\\studentenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D5653D8-36F9-4795-8AE7-8754B0956811}|Service\\Service.csproj|solutionrelative:service\\enums\\studentenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentEnum.cs",
+              "DocumentMoniker": "C:\\Users\\baloglan\\Desktop\\C# task\\CourseApplication\\Service\\Enums\\StudentEnum.cs",
+              "RelativeDocumentMoniker": "Service\\Enums\\StudentEnum.cs",
+              "ToolTip": "C:\\Users\\baloglan\\Desktop\\C# task\\CourseApplication\\Service\\Enums\\StudentEnum.cs",
+              "RelativeToolTip": "Service\\Enums\\StudentEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T20:43:30.2Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -28,7 +45,7 @@
               "RelativeDocumentMoniker": "CourseApplication\\Program.cs",
               "ToolTip": "C:\\Users\\baloglan\\Desktop\\C# task\\CourseApplication\\CourseApplication\\Program.cs*",
               "RelativeToolTip": "CourseApplication\\Program.cs*",
-              "ViewState": "AgIAADQAAAAAAAAAAAAgwB8AAABjAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwGIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T16:29:19.844Z",
               "EditorCaption": ""
