@@ -177,5 +177,41 @@ namespace CourseApplication.Controllers
 
             studentService.DeleteStudent(id);
         }
+
+        public void GetStudentByName() 
+        {
+            ConsoleHelper.MsgColor(ConsoleColor.Green, "Enter student name:");
+            string? studentName = Console.ReadLine().Trim();
+            Student[] studentByName = studentService.GetStudentsByName(m => m.Name != null && m.Name.Equals(studentName, StringComparison.OrdinalIgnoreCase)).ToArray();
+            foreach (var student in studentByName) 
+            {
+                var groupInfo = student.group != null ? $"Group ID: {student.group.Id}, Name: {student.group.Name}" : "No group";
+                ConsoleHelper.MsgColor(ConsoleColor.Green, $"Student ID: {student.Id} ,student name: {student.Name}, student surname: {student.Surname}, student age: {student.Age}, student group: {groupInfo}");
+            }
+        }
+
+        public void GetStudentByAge() 
+        {
+            ConsoleHelper.MsgColor(ConsoleColor.Green, "Enter student age:");
+        AgeInput: string? ageInput = Console.ReadLine();
+            if (!int.TryParse(ageInput?.Trim(), out int age))
+            {
+                ConsoleHelper.MsgColor(ConsoleColor.Red, "Invalid age. Only numbers are allowed.");
+                goto AgeInput;
+            }
+
+            var students = studentService.GetStudentByAge(m => m.Age == age).ToArray();
+            if (students.Length == 0)
+            {
+                ConsoleHelper.MsgColor(ConsoleColor.Yellow, $"No students found with age {age}.");
+                return;
+            }
+
+            foreach (var student in students)
+            {
+                var groupInfo = student.group != null ? $"Group ID: {student.group.Id}, Name: {student.group.Name}" : "No group";
+                ConsoleHelper.MsgColor(ConsoleColor.Green, $"Student ID: {student.Id}, Name: {student.Name}, Surname: {student.Surname}, Age: {student.Age}, {groupInfo}");
+            }
+        }
     }
 }

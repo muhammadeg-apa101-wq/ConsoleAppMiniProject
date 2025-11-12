@@ -29,7 +29,7 @@ namespace CourseApplication
 
                 if (isNumber)
                 {
-                    if (!string.IsNullOrWhiteSpace(input) && Regex.IsMatch(input, @"^(?:[1-9]|1[0-3])$"))
+                    if (!string.IsNullOrWhiteSpace(input) && Regex.IsMatch(input, @"^(?:[0-9]|1[0-5])$"))
                     {
                         switch (number)
                         {
@@ -69,26 +69,32 @@ namespace CourseApplication
                                 case (int)StudentEnum.GetStudentById:
                                 studentController.GetStudentById();
                                 break;
+                            case (int)StudentEnum.GetStudentByName:
+                                studentController.GetStudentByName();
+                                break;
                                 case (int)StudentEnum.Delete:
                                     studentController.DeleteStudentById();                         
+                                    break;
+                                case (int)StudentEnum.GetStudentByAge:
+                                    studentController.GetStudentByAge();
                                     break;
                             case 0:
                                 ConsoleHelper.MsgColor(ConsoleColor.Yellow, "Exiting...");
                                 return;
                             default:
-                                ConsoleHelper.MsgColor(ConsoleColor.Red, "Invalid option. Please choose a number between 1 and 13. Pay attention to white spaces and symbols");
+                                ConsoleHelper.MsgColor(ConsoleColor.Red, "Invalid option. Please choose a number between 1 and 15. Pay attention to white spaces and symbols");
                                 goto Input;
                         }
                     }
                     else
                     {
-                        ConsoleHelper.MsgColor(ConsoleColor.Red, "Invalid option. Please choose a number between 1 and 13.");
+                        ConsoleHelper.MsgColor(ConsoleColor.Red, "Invalid option. Please choose a number between 1 and 15.");
                         goto Input;
                     }
                 }
                 else
                 {
-                    ConsoleHelper.MsgColor(ConsoleColor.Red, "Please enter a valid number (1–13).");
+                    ConsoleHelper.MsgColor(ConsoleColor.Red, "Please enter a valid number (1–15).");
                     goto Input;
                 }
 
@@ -98,7 +104,7 @@ namespace CourseApplication
         public static void GetMenu() 
         {
             Console.WriteLine("Choose an option:");
-            ConsoleHelper.MsgColor(ConsoleColor.Cyan, "Group : 1- Create Group, 2- Update a Group Info, 3- Get a Group By ID, 4- Get All Groups, 5- Get Groups by Name 6- Get Groups by Teacher 7 - Get Groups by Room, 8- Delete a Group By ID, Student: 9- Create a Student , 10- Update Student info, 11-GetAllStudents 12-Get Student by ID 13- Delete a Student, 0 - to Exit");
+            ConsoleHelper.MsgColor(ConsoleColor.Cyan, "Group : 1- Create Group, 2- Update a Group Info, 3- Get a Group By ID, 4- Get All Groups, 5- Get Groups by Name 6- Get Groups by Teacher 7 - Get Groups by Room, 8- Delete a Group By ID, Student: 9- Create a Student , 10- Update Student info, 11-GetAllStudents 12-Get Student by ID, 13- Get student by name, 14- Get student by age, 15- Delete a Student, 0 - to Exit");
         }
     }
 }

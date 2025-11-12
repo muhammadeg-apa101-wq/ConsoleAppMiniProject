@@ -21,7 +21,7 @@ namespace Repository.Repositories
                 
                 if (data.group != null && data.group.Id > 0)
                 {
-                    var grp = AppDbContext<Group>.datas.Find(g => g.Id == data.group.Id);
+                    var grp = AppDbContext<Group>.datas.Find(m => m.Id == data.group.Id);
                     data.group = grp; 
                 }
 
@@ -35,7 +35,7 @@ namespace Repository.Repositories
 
         public void Delete(int id)
         {
-            var student = AppDbContext<Student>.datas.Find(s => s.Id == id);
+            var student = AppDbContext<Student>.datas.Find(m => m.Id == id);
             if (student != null)
             {
                 AppDbContext<Student>.datas.Remove(student);
@@ -67,13 +67,19 @@ namespace Repository.Repositories
             return AppDbContext<Student>.datas.Find(predicate);
         }
 
+        public Student? GetByAge(Predicate<Student> predicate) 
+        {
+            if (AppDbContext<Student>.datas == null) return null;
+            return AppDbContext<Student>.datas.Find(predicate);
+        }
+
         public void Update(int id, Student data)
         {
             try
             {
                 if (data is null) throw new NotFoundException("Data is empty.");
 
-                var exist = AppDbContext<Student>.datas.Find(s => s.Id == id);
+                var exist = AppDbContext<Student>.datas.Find(m => m.Id == id);
                 if (exist == null) throw new NotFoundException($"Student with ID {id} not found.");
 
                 
@@ -84,7 +90,7 @@ namespace Repository.Repositories
                
                 if (data.group != null && data.group.Id > 0)
                 {
-                    var grp = AppDbContext<Group>.datas.Find(g => g.Id == data.group.Id);
+                    var grp = AppDbContext<Group>.datas.Find(m => m.Id == data.group.Id);
                     exist.group = grp;
                 }
                 else

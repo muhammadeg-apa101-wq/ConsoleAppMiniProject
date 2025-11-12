@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Service.Enums
 {
+    //switch case ucun
     public enum GroupEnum
     {
         Create = 1,

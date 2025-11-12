@@ -43,7 +43,7 @@ namespace Service.Services
         //group silen method
         public void DeleteGroup(int id)
         {
-            Group group = _groupRepository.GetById(g => g.Id == id);
+            Group group = _groupRepository.GetById(m => m.Id == id);
 
             if (group == null)
             {
@@ -64,7 +64,7 @@ namespace Service.Services
         //id-ye gore group getirir
         public Group GetGroupById(int id)
         {
-           Group group = _groupRepository.GetById(g => g.Id == id);
+           Group group = _groupRepository.GetById(m => m.Id == id);
             if (group == null)
             {
                 ConsoleHelper.MsgColor(ConsoleColor.Red, $"Group with ID {id} not found.");

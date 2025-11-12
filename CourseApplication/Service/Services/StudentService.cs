@@ -6,6 +6,7 @@ using Service.Services.Interfaces;
 using Service.Validators;
 using System;
 using System.Collections.Generic;
+using System.Threading.Channels;
 
 namespace Service.Services
 {
@@ -37,7 +38,7 @@ namespace Service.Services
            
             if (student.group != null && student.group.Id > 0)
             {
-                var grp = _groupRepository.GetById(g => g.Id == student.group.Id);
+                var grp = _groupRepository.GetById(m => m.Id == student.group.Id);
                 student.group = grp; 
             }
 
@@ -65,7 +66,7 @@ namespace Service.Services
 
             if (student.group != null && student.group.Id > 0)
             {
-                var grp = _groupRepository.GetById(g => g.Id == student.group.Id);
+                var grp = _groupRepository.GetById(m => m.Id == student.group.Id);
                 student.group = grp;
             }
 
@@ -82,7 +83,7 @@ namespace Service.Services
 
         public Student GetStudentById(int id)
         {
-            var student = _studentRepository.GetById(s => s.Id == id);
+            var student = _studentRepository.GetById(m => m.Id == id);
             if (student == null)
             {
                 ConsoleHelper.MsgColor(ConsoleColor.Red, $"Student with ID {id} not found.");
@@ -99,7 +100,7 @@ namespace Service.Services
 
         public void DeleteStudent(int id)
         {
-            var existing = _studentRepository.GetById(s => s.Id == id);
+            var existing = _studentRepository.GetById(m => m.Id == id);
             if (existing == null)
             {
                 ConsoleHelper.MsgColor(ConsoleColor.Red, $"Student with ID {id} not found.");
@@ -112,17 +113,44 @@ namespace Service.Services
 
         public List<Student> GetGroupByStudent(Predicate<Student>? predicate = null)
         {
-            throw new NotImplementedException();
+            return new List<Student>();
+
         }
 
         public List<Student> GetStudentsByName(Predicate<Student>? predicate = null)
         {
-            throw new NotImplementedException();
+            if (predicate == null)
+            {
+                ConsoleHelper.MsgColor(ConsoleColor.Red, "Please provide a name to search.");
+                return new List<Student>();
+            }
+
+            var existing = _studentRepository.GetAllByName(predicate);
+            if (existing == null || existing.Count == 0)
+            {
+                ConsoleHelper.MsgColor(ConsoleColor.Red, "No student found matching this name. Enter correctly or enter another.");
+                return new List<Student>();
+            }
+
+            return existing;
         }
 
         public List<Student> GetStudentByAge(Predicate<Student>? predicate = null)
         {
-            throw new NotImplementedException();
+            if (predicate == null)
+            {
+                ConsoleHelper.MsgColor(ConsoleColor.Red, "Please provide an age to search.");
+                return new List<Student>();
+            }
+
+            var existing = _studentRepository.GetAll(predicate);
+            if (existing == null || existing.Count == 0)
+            {
+                ConsoleHelper.MsgColor(ConsoleColor.Red, "No student found matching this age.");
+                return new List<Student>();
+            }
+
+            return existing;
         }
     }
 }
